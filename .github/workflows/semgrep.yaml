@@ -15,5 +15,5 @@ jobs:
     # Dependabot pull requests lack the permissions the scan needs.
     if: (github.actor != 'dependabot[bot]')
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - run: semgrep scan --config auto
