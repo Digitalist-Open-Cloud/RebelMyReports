@@ -3,6 +3,7 @@
 namespace Piwik\Plugins\RebelMyReports\tests\Integration;
 
 use Piwik\Container\StaticContainer;
+use Piwik\Plugin\Manager;
 use Piwik\Plugins\CustomDimensions\API as CustomDimensionsApi;
 use Piwik\Plugins\Goals\API as GoalsApi;
 use Piwik\Plugins\RebelMyReports\Catalogue;
@@ -29,18 +30,16 @@ class CatalogueTest extends IntegrationTestCase
         'goal conversion rate' => 'goal_1_conversion_uniq_visitors_rate',
     ];
 
+    // Not part of Matomo. What they add is only required where they are installed.
+    private const PREMIUM_PLUGINS = ['AdvertisingConversionExport', 'FormAnalytics', 'MediaAnalytics'];
+
     private Catalogue $catalogue;
 
     protected static function configureFixture($fixture)
     {
         parent::configureFixture($fixture);
 
-        $fixture->extraPluginsToLoad = [
-            'AdvertisingConversionExport',
-            'FormAnalytics',
-            'MarketingCampaignsReporting',
-            'MediaAnalytics',
-        ];
+        $fixture->extraPluginsToLoad = array_merge(['MarketingCampaignsReporting'], self::PREMIUM_PLUGINS);
     }
 
     public function setUp(): void
@@ -80,7 +79,7 @@ class CatalogueTest extends IntegrationTestCase
         }
 
         $missing = [];
-        foreach ($this->readRequired('required-dimensions.txt') as $name) {
+        foreach ($this->readRequired('dimensions') as $name) {
             $alias = self::DIMENSION_ALIASES[$name] ?? null;
             if (!isset($labels[$name]) && !isset($dimensions[$alias])) {
                 $missing[] = $name;
@@ -99,7 +98,7 @@ class CatalogueTest extends IntegrationTestCase
         }
 
         $missing = [];
-        foreach ($this->readRequired('required-metrics.txt') as $name) {
+        foreach ($this->readRequired('metrics') as $name) {
             $alias = self::METRIC_ALIASES[$name] ?? null;
             if (!isset($labels[$name]) && !isset($metrics[$alias])) {
                 $missing[] = $name;
@@ -114,6 +113,10 @@ class CatalogueTest extends IntegrationTestCase
      */
     public function testAcceptsCombinableSelections(array $dimensions, array $metrics)
     {
+        if ($dimensions === ['FormAnalytics.FormName', 'MediaAnalytics.MediaTitle'] && !$this->hasPremiumPlugins()) {
+            $this->markTestSkipped('Needs FormAnalytics and MediaAnalytics.');
+        }
+
         $this->catalogue->assertCombinable($dimensions, $metrics);
         $this->addToAssertionCount(1);
     }
@@ -161,12 +164,26 @@ class CatalogueTest extends IntegrationTestCase
         ];
     }
 
+    private function hasPremiumPlugins(): bool
+    {
+        return array_filter(self::PREMIUM_PLUGINS, [Manager::getInstance(), 'isPluginLoaded']) === self::PREMIUM_PLUGINS;
+    }
+
     /**
      * @return string[] lower-cased names
      */
-    private function readRequired(string $file): array
+    private function readRequired(string $kind): array
     {
-        $lines = file(__DIR__ . '/../resources/' . $file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        $files = ['required-' . $kind . '.txt'];
+        if ($this->hasPremiumPlugins()) {
+            $files[] = 'required-' . $kind . '-premium.txt';
+        }
+
+        $lines = [];
+        foreach ($files as $file) {
+            $path = __DIR__ . '/../resources/' . $file;
+            $lines = array_merge($lines, file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES));
+        }
 
         return array_map('mb_strtolower', $lines);
     }

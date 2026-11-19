@@ -1,7 +1,5 @@
 Action URL
 Actions In Visit
-Ad Click ID
-Ad Provider
 Browser
 Browser Engine
 Browser Version
@@ -47,14 +45,6 @@ Exit Page Title
 Exit Page URL
 Extract
 Fingerprint
-Form Conversions
-Form Starts
-Form Submissions
-Form Views
-Grouped Resource
-Hesitation Time
-Hour
-Impressions
 Keyword
 Keyword (Site Search)
 Keyword Count (Site Search)
@@ -64,9 +54,6 @@ Local Time — Hour (start Of Visit)
 Local Time — Minute (start Of Visit)
 Location
 Longitude
-Media Length (in Seconds)
-Media Progress
-Media Title
 Network Time
 Number Of Interactions
 Number Of Internal Searches
@@ -80,7 +67,6 @@ Overall Revenue
 Page Title
 Page URL
 Pageview Position
-Player Name
 Plugin (Cookie)
 Plugin (Flash)
 Plugin (Java)
@@ -98,7 +84,6 @@ Referrer
 Referrer Name
 Referrer URL
 Resolution
-Resource
 Search Category
 Seconds Since First Visit
 Seconds Since Last Ecommerce Order
@@ -121,11 +106,7 @@ Time In UTC — Quarter (time Of Last Action)
 Time In UTC — Second (Time Of Last Action)
 Time In UTC — Week Of Year (time Of Last Action)
 Time In UTC — Year (time Of Last Action)
-Time Spent
 Time Spent In Referring Action
-Time Spent Playing Media (in Seconds)
-Time To First Submit
-Time To Initial Media Play (in Seconds)
 Transfer Time
 User ID
 Utm_custom

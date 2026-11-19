@@ -1,6 +1,5 @@
 Average Value
 Avg. Actions In Visit Per Visit
-Avg. Completion
 Avg. Days Since First Visit Per Visit
 Avg. Days Since Last Ecommerce Order Per Visit
 Avg. Days Since Last Visit Per Visit
@@ -8,7 +7,6 @@ Avg. Discount Per Order ID
 Avg. DOM Completion Time
 Avg. DOM Processing Time
 Avg. Events Per Visit
-Avg. Media Length
 Avg. Network Time
 Avg. Number Of Interactions Per Visit
 Avg. Number Of Internal Searches Per Visit
@@ -23,7 +21,6 @@ Avg. Server Time
 Avg. Shipping Per Order ID
 Avg. Subtotal Per Order ID
 Avg. Tax Per Order ID
-Avg. Time Spent
 Avg. Transfer Time
 Avg. Visit Duration (in Seconds) Per Visit
 Bounce Rate
@@ -33,27 +30,8 @@ Conversions Goal
 Days To Conversion Goal
 Events With A Value
 Fingerprint
-Finish Rate
-Finishes
-Form Avg. Hesitation Time
-Form Avg. Time Spent
-Form Avg. Time To First Submit
-Form Conversion Rate
-Form Conversions
-Form Re-submitter Rate
-Form Re-submitters
-Form Starters
-Form Starters Rate
-Form Starts
-Form Submissions
-Form Submitters
-Form Viewers
-Form Views
 Goal Conversion Rate
-Hesitation Time
 Hits
-Impressions
-Impressions By Unique Visitors
 Max Actions In Visit
 Max Days Since First Visit
 Max Days Since Last Ecommerce Order
@@ -63,9 +41,6 @@ Max DOM Completion Time
 Max DOM Processing Time
 Max Event Value
 Max Events
-Max Form Views
-Max Hesitation Time
-Max Media Length (in Seconds)
 Max Network Time
 Max Number Of Interactions
 Max Number Of Internal Searches
@@ -83,11 +58,7 @@ Max Server Time
 Max Shipping
 Max Subtotal
 Max Tax
-Max Time Spent
 Max Time Spent In Referring Action
-Max Time Spent Playing Media (in Seconds)
-Max Time To First Submit
-Max Time To Initial Media Play (in Seconds)
 Max Transfer Time
 Max Viewed Product Price
 Max Visit Duration (in Seconds)
@@ -106,11 +77,7 @@ Pageviews With Network Time
 Pageviews With On Load Time
 Pageviews With Server Time
 Pageviews With Transfer Time
-Play Rate
-Plays
 Revenue Goal
-Time Spent
-Time To First Submit
 Total Actions In Visit
 Total Days Since First Visit
 Total Days Since Last Ecommerce Order
@@ -120,7 +87,6 @@ Total DOM Completion Time
 Total DOM Processing Time
 Total Event Value
 Total Events
-Total Media Length (in Seconds)
 Total Network Time
 Total Number Of Interactions
 Total Number Of Internal Searches
@@ -139,14 +105,10 @@ Total Shipping
 Total Subtotal
 Total Tax
 Total Time Spent In Referring Action
-Total Time Spent Playing Media (in Seconds)
-Total Time To Initial Media Play (in Seconds)
 Total Transfer Time
 Total Viewed Product Price
 Total Visit Duration (in Seconds)
 Unique Action URL
-Unique Ad Click ID
-Unique Ad Provider
 Unique Browser Engines
 Unique Browser Versions
 Unique Browsers
@@ -184,7 +146,6 @@ Unique Event URLs
 Unique Exit Page Titles
 Unique Exit Page URLs
 Unique Extract
-Unique Grouped Resources
 Unique Keyword Counts (Site Search)
 Unique Keywords
 Unique Keywords (Site Search)
@@ -193,12 +154,10 @@ Unique Latitudes
 Unique Location
 Unique Longitudes
 Unique Measurables
-Unique Media Titles
 Unique Operating System Versions
 Unique Operating Systems
 Unique Page Titles
 Unique Page URLs
-Unique Player Names
 Unique Product Names
 Unique Product SKUs
 Unique Referrer
@@ -206,10 +165,8 @@ Unique Referrer Names
 Unique Referrer URLs
 Unique Regions
 Unique Resolutions
-Unique Resources
 Unique User IDs
 Unique Utm_custom
-Unique Video Resolutions
 Unique Viewed Product Category 1
 Unique Viewed Product Category 2
 Unique Viewed Product Category 3

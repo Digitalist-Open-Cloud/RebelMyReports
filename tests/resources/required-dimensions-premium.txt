@@ -1,0 +1,19 @@
+Ad Click ID
+Ad Provider
+Form Conversions
+Form Starts
+Form Submissions
+Form Views
+Grouped Resource
+Hesitation Time
+Hour
+Impressions
+Media Length (in Seconds)
+Media Progress
+Media Title
+Player Name
+Resource
+Time Spent
+Time Spent Playing Media (in Seconds)
+Time To First Submit
+Time To Initial Media Play (in Seconds)

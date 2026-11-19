@@ -1,0 +1,43 @@
+Avg. Completion
+Avg. Media Length
+Avg. Time Spent
+Finish Rate
+Finishes
+Form Avg. Hesitation Time
+Form Avg. Time Spent
+Form Avg. Time To First Submit
+Form Conversion Rate
+Form Conversions
+Form Re-submitter Rate
+Form Re-submitters
+Form Starters
+Form Starters Rate
+Form Starts
+Form Submissions
+Form Submitters
+Form Viewers
+Form Views
+Hesitation Time
+Impressions
+Impressions By Unique Visitors
+Max Form Views
+Max Hesitation Time
+Max Media Length (in Seconds)
+Max Time Spent
+Max Time Spent Playing Media (in Seconds)
+Max Time To First Submit
+Max Time To Initial Media Play (in Seconds)
+Play Rate
+Plays
+Time Spent
+Time To First Submit
+Total Media Length (in Seconds)
+Total Time Spent Playing Media (in Seconds)
+Total Time To Initial Media Play (in Seconds)
+Unique Ad Click ID
+Unique Ad Provider
+Unique Grouped Resources
+Unique Media Titles
+Unique Player Names
+Unique Resources
+Unique Video Resolutions

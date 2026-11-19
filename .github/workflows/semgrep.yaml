@@ -9,11 +9,11 @@ on:
 jobs:
   semgrep:
     name: semgrep-oss/scan
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     container:
       image: semgrep/semgrep
     # Dependabot pull requests lack the permissions the scan needs.
     if: (github.actor != 'dependabot[bot]')
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - run: semgrep scan --config auto
