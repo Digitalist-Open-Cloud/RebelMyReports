@@ -1,0 +1,107 @@
+.myReportPreview {
+  padding: 16px;
+  border: 1px solid @theme-color-border;
+  border-radius: 4px;
+  background: @theme-color-background-tinyContrast;
+
+  .myReportPreview__title {
+    margin: 0 0 4px;
+  }
+
+  .myReportPreview__hint {
+    color: @theme-color-text-light;
+    font-size: 12px;
+  }
+
+  .myReportPreview__message {
+    padding: 24px 0;
+    text-align: center;
+    color: @theme-color-text-light;
+  }
+
+  .myReportPreview__message--error {
+    color: @theme-color-brand;
+  }
+
+  .myReportPreview__bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 220px;
+    padding: 8px;
+    background: @theme-color-background-base;
+  }
+
+  .myReportPreview__bar {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 11px;
+  }
+
+  .myReportPreview__barFill {
+    width: 100%;
+    min-height: 1px;
+    background: @theme-color-link;
+  }
+
+  .myReportPreview__barLabel {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: @theme-color-text-light;
+  }
+
+  .myReportPreview__pie {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px;
+    background: @theme-color-background-base;
+  }
+
+  .myReportPreview__pieChart {
+    flex: none;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .myReportPreview__legend {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .myReportPreview__dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+    border-radius: 50%;
+  }
+
+  .myReportPreview__cloud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 14px;
+    padding: 16px;
+    background: @theme-color-background-base;
+    color: @theme-color-link;
+  }
+
+  .myReportPreview__scroll {
+    overflow-x: auto;
+  }
+
+  .myReportPreview__table {
+    width: 100%;
+    margin: 0;
+    background: @theme-color-background-base;
+  }
+}

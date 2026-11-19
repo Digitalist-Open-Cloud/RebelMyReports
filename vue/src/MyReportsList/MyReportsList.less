@@ -1,0 +1,75 @@
+.myReportsList {
+  .myReportsList__search {
+    width: 280px;
+    max-width: 100%;
+    margin-bottom: 16px;
+    padding: 6px 10px;
+    border: 1px solid @theme-color-border;
+    border-radius: 3px;
+  }
+
+  // override: core sets a wider padding with !important, which leaves no room for nine columns
+  table.entityTable thead tr th,
+  table.entityTable tbody tr td {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  table.entityTable tbody tr td.myReportsList__handleCell {
+    width: 1%;
+    padding-right: 0 !important;
+  }
+
+  .myReportsList__nameCell {
+    min-width: 130px;
+  }
+
+  .myReportsList__name {
+    font-weight: bold;
+  }
+
+  .myReportsList__description {
+    display: block;
+    color: @theme-color-text-light;
+    font-size: 12px;
+  }
+
+  .myReportsList__chip {
+    display: inline-block;
+    margin: 2px 4px 2px 0;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: @theme-color-background-tinyContrast;
+    border: 1px solid @theme-color-border;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .myReportsList__chip--metric {
+    border-color: @theme-color-brand;
+  }
+
+  .myReportsList__handle:enabled {
+    cursor: grab;
+  }
+
+  .myReportsList__actions {
+    white-space: nowrap;
+  }
+
+  .myReportsList__date {
+    white-space: nowrap;
+  }
+
+  .myReportsList__problem {
+    display: block;
+    max-width: 260px;
+    color: @color-red-matomo;
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  .myReportsList__none {
+    color: @theme-color-text-light;
+  }
+}

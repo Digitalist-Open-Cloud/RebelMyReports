@@ -1,0 +1,147 @@
+Action URL
+Actions In Visit
+Ad Click ID
+Ad Provider
+Browser
+Browser Engine
+Browser Version
+Campaign Content
+Campaign Group
+Campaign Id
+Campaign Keyword
+Campaign Medium
+Campaign Name
+Campaign Placement
+Campaign Source
+Channel Type
+City
+Clicked Outlink
+Client Type
+Colour
+Content Interaction
+Content Name
+Content Piece
+Content Target
+Continent
+Country
+Date
+Days Since First Visit
+Days Since Last Ecommerce Order
+Days Since Last Visit
+Device Brand
+Device Model
+Device Type
+Discount
+DOM Completion Time
+DOM Processing Time
+Download URL
+Entry Page Title
+Entry Page URL
+Event Action
+Event Category
+Event Name
+Event URL
+Event Value
+Events
+Exit Page Title
+Exit Page URL
+Extract
+Fingerprint
+Form Conversions
+Form Starts
+Form Submissions
+Form Views
+Grouped Resource
+Hesitation Time
+Hour
+Impressions
+Keyword
+Keyword (Site Search)
+Keyword Count (Site Search)
+Language
+Latitude
+Local Time — Hour (start Of Visit)
+Local Time — Minute (start Of Visit)
+Location
+Longitude
+Media Length (in Seconds)
+Media Progress
+Media Title
+Network Time
+Number Of Interactions
+Number Of Internal Searches
+Number Of Items In Cart
+Number Of Visits
+On Load Time
+Operating System Family
+Order ID
+Order Value
+Overall Revenue
+Page Title
+Page URL
+Pageview Position
+Player Name
+Plugin (Cookie)
+Plugin (Flash)
+Plugin (Java)
+Plugin (PDF)
+Plugin (QuickTime)
+Plugin (RealPlayer)
+Plugin (Silverlight)
+Plugin (Windows Media)
+Product Name
+Product Price
+Product Quantity
+Product SKU
+Profilable
+Referrer
+Referrer Name
+Referrer URL
+Resolution
+Resource
+Search Category
+Seconds Since First Visit
+Seconds Since Last Ecommerce Order
+Seconds Since Last Visit
+Server Time
+Shipping
+Site Time — Hour
+Site Time — Hour (start Of Visit)
+Site Time — Hour (time Of Last Action)
+Subtotal
+Tax
+Time In UTC — Day Of Month (time Of Last Action)
+Time In UTC — Day Of Week (time Of Last Action)
+Time In UTC — Day Of Year (time Of Last Action)
+Time In UTC — Minute
+Time In UTC — Minute (start Of Visit)
+Time In UTC — Minute (time Of Last Action)
+Time In UTC — Month (time Of Last Action)
+Time In UTC — Quarter (time Of Last Action)
+Time In UTC — Second (Time Of Last Action)
+Time In UTC — Week Of Year (time Of Last Action)
+Time In UTC — Year (time Of Last Action)
+Time Spent
+Time Spent In Referring Action
+Time Spent Playing Media (in Seconds)
+Time To First Submit
+Time To Initial Media Play (in Seconds)
+Transfer Time
+User ID
+Utm_custom
+Viewed Product Category 1
+Viewed Product Category 2
+Viewed Product Category 3
+Viewed Product Category 4
+Viewed Product Category 5
+Viewed Product Name
+Viewed Product Price
+Viewed Product SKU
+Visit Converted A Specific Goal Id
+Visit Converted At Least One Goal
+Visit Duration (in Seconds)
+Visit Ecommerce Status At The End Of The Visit
+Visit Type
+Visitor ID
+Visitor IP
+Website Name

@@ -1,0 +1,66 @@
+.myReportItemPicker {
+  margin-bottom: 24px;
+
+  .myReportItemPicker__title {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .myReportItemPicker__chipList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 8px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .myReportItemPicker__chip {
+    display: flex;
+    align-items: safe center;
+    gap: 4px;
+    padding: 4px 6px 4px 4px;
+    border-radius: 16px;
+    background: @theme-color-background-tinyContrast;
+    border: 1px solid @theme-color-border;
+  }
+
+  .myReportItemPicker__position {
+    flex: none;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    border-radius: 50%;
+    background: @theme-color-brand;
+    color: @theme-color-brand-contrast;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .myReportItemPicker__name {
+    padding: 0 4px;
+  }
+
+  .myReportItemPicker__button {
+    flex: none;
+    padding: 2px;
+    border: 0;
+    background: none;
+    color: @theme-color-text-light;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .myReportItemPicker__button:hover {
+    color: @theme-color-brand;
+  }
+
+  .myReportItemPicker__button:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  .myReportItemPicker__limit {
+    color: @theme-color-text-light;
+  }
+}

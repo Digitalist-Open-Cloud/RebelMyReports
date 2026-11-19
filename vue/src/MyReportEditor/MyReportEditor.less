@@ -1,0 +1,111 @@
+.myReportEditor {
+  .myReportEditor__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
+  }
+
+  .myReportEditor__sectionTitle {
+    margin: 32px 0 8px;
+  }
+
+  .myReportEditor__row {
+    display: flex;
+    gap: 16px;
+
+    > * { flex: 1; }
+  }
+
+  .myReportEditor__valueGroups {
+    margin-bottom: 24px;
+  }
+
+  .myReportEditor__valueGroup {
+    margin-bottom: 16px;
+    padding: 12px 12px 4px;
+    border: 1px solid @theme-color-border;
+    border-radius: 6px;
+  }
+
+  .myReportEditor__groupValues {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin: 0 10px 12px;
+  }
+
+  .myReportEditor__groupValue {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 4px 2px 10px;
+    border-radius: 12px;
+    background: @theme-color-background-tinyContrast;
+    border: 1px solid @theme-color-border;
+    font-size: 12px;
+
+    button {
+      border: 0;
+      background: none;
+      cursor: pointer;
+      font-size: 10px;
+    }
+  }
+
+  .myReportEditor__groupValueInput {
+    flex: 1;
+    min-width: 140px;
+    padding: 4px 8px;
+    border: 1px solid @theme-color-border;
+    border-radius: 3px;
+  }
+
+  .myReportEditor__removeFilter {
+    flex: none;
+    align-self: center;
+  }
+
+  .myReportEditor__help {
+    color: @theme-color-text-light;
+  }
+
+  .myReportEditor__segment {
+    // override: the segment generator has a fixed width wider than the form column
+    .segment-generator { width: 100%; }
+  }
+
+  .myReportEditor__warning {
+    margin-top: 32px;
+  }
+
+  .myReportEditor__actions {
+    display: flex;
+    align-items: safe center;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .myReportEditor__cancel {
+    border: 0;
+    background: none;
+    color: @theme-color-link;
+    cursor: pointer;
+  }
+
+  .myReportEditor__preview {
+    position: sticky;
+    top: 16px;
+  }
+
+  @media (max-width: 1200px) {
+    .myReportEditor__layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .myReportEditor__preview {
+      position: static;
+    }
+  }
+}

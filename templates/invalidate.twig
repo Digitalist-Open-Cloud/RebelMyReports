@@ -1,0 +1,7 @@
+{% extends 'admin.twig' %}
+
+{% set title %}{{ 'RebelMyReports_InvalidateReports'|translate }}{% endset %}
+
+{% block content %}
+    <div vue-entry="RebelMyReports.InvalidateMyReports" reports="{{ reports|json_encode }}" segments="{{ segments|json_encode }}"></div>
+{% endblock %}

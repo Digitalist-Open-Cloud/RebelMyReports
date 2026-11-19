@@ -1,0 +1,95 @@
+{% extends 'admin.twig' %}
+
+{% set title %}{{ 'RebelMyReports_Documentation'|translate }}{% endset %}
+
+{% block content %}
+<div class="rebelMyReportsDocumentation">
+    <div vue-entry="CoreHome.ContentBlock" content-title="{{ 'RebelMyReports_Documentation'|translate|e('html_attr') }}">
+        <p>{{ 'RebelMyReports_DocIntro'|translate }}</p>
+    </div>
+
+    <div vue-entry="CoreHome.ContentBlock" content-title="{{ 'RebelMyReports_CreateNewReport'|translate|e('html_attr') }}">
+        <p>{{ 'RebelMyReports_DocCreate'|translate }}</p>
+        <p>{{ 'RebelMyReports_DocCreateEdit'|translate }}</p>
+        <ul class="browser-default">
+            <li>{{ 'RebelMyReports_DocTypeTable'|translate(limits.max_dimensions) }}</li>
+            <li>{{ 'RebelMyReports_DocTypeEvolution'|translate }}</li>
+            <li>{{ 'RebelMyReports_DocTypeKeyFigure'|translate }}</li>
+        </ul>
+        <p>{{ 'RebelMyReports_DocCombine'|translate }}</p>
+        <p>{{ 'RebelMyReports_DocFirstData'|translate(rearchiveMonths) }}</p>
+    </div>
+
+    <div vue-entry="RebelMyReports.MyReportExamples" examples="{{ examples|json_encode }}"></div>
+
+    <div vue-entry="CoreHome.ContentBlock" content-title="{{ 'RebelMyReports_DocRowsTitle'|translate|e('html_attr') }}">
+        <p>{{ 'RebelMyReports_DocSegmentFilter'|translate }}</p>
+        <p>{{ 'RebelMyReports_DocRows'|translate }}</p>
+    </div>
+
+    <div vue-entry="CoreHome.ContentBlock" content-title="{{ 'RebelMyReports_ValueGroups'|translate|e('html_attr') }}">
+        <p>{{ 'RebelMyReports_DocValueGroups'|translate }}</p>
+        <p>{{ 'RebelMyReports_DocValueGroupsHow'|translate }}</p>
+        <p>{{ 'RebelMyReports_DocValueGroupsRules'|translate }}</p>
+    </div>
+
+    <div vue-entry="CoreHome.ContentBlock" content-title="{{ 'RebelMyReports_CalculatedMetrics'|translate|e('html_attr') }}">
+        <p>{{ 'RebelMyReports_DocMetrics'|translate }}</p>
+        <pre>pageviews / nb_visits</pre>
+        <p>{{ 'RebelMyReports_DocMetricsRates'|translate }}</p>
+    </div>
+
+    <div vue-entry="CoreHome.ContentBlock" content-title="{{ 'RebelMyReports_WhereToShow'|translate|e('html_attr') }}">
+        <p>{{ 'RebelMyReports_DocShowPage'|translate }}</p>
+        <p>{{ 'RebelMyReports_DocVisualization'|translate }}</p>
+        <p>{{ 'RebelMyReports_DocShowOrder'|translate }}</p>
+        <p>{{ 'RebelMyReports_DocShowElsewhere'|translate }}</p>
+        <p>{{ 'RebelMyReports_DocShowManage'|translate }}</p>
+    </div>
+
+    <div vue-entry="CoreHome.ContentBlock" content-title="{{ 'RebelMyReports_DocArchiveTitle'|translate|e('html_attr') }}">
+        <p>{{ 'RebelMyReports_DocArchive'|translate }}</p>
+        <p>{{ 'RebelMyReports_DocArchiveCommand'|translate }}</p>
+        <pre>./console rebelmyreports:list
+./console rebelmyreports:archive
+./console rebelmyreports:archive --idmyreport=3
+./console rebelmyreports:archive --idmyreport=3,4 --rearchive --date=2024-01-01,2024-03-31</pre>
+        <p>
+            {{ 'RebelMyReports_DocArchiveInvalidate'|translate }}
+            {% if isSuperUser %}
+                <a href="{{ linkTo({'module': 'RebelMyReports', 'action': 'invalidate'}) }}">{{ 'RebelMyReports_InvalidateReports'|translate }}</a>
+            {% endif %}
+        </p>
+        <p>{{ 'RebelMyReports_DocArchiveTimeout'|translate }}</p>
+    </div>
+
+    <div vue-entry="CoreHome.ContentBlock" content-title="{{ 'RebelMyReports_DocLimitsTitle'|translate|e('html_attr') }}">
+        <p>{{ 'RebelMyReports_DocLimits'|translate }}</p>
+        <table class="entityTable dataTable">
+            <thead>
+                <tr>
+                    <th>{{ 'RebelMyReports_DocLimit'|translate }}</th>
+                    <th>{{ 'General_Value'|translate }}</th>
+                    <th>config.ini.php</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for name, value in limits %}
+                    <tr>
+                        <td>{{ limitTitles[name]|translate }}</td>
+                        <td>{{ value }}</td>
+                        <td><code>{{ name }}</code></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div vue-entry="CoreHome.ContentBlock" content-title="API">
+        <p>
+            {{ 'RebelMyReports_DocApi'|translate }}
+            <a href="{{ linkTo({'module': 'API', 'action': 'listAllAPI'}) }}#RebelMyReports">RebelMyReports</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

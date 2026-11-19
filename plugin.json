@@ -1,0 +1,27 @@
+{
+    "name": "RebelMyReports",
+    "description": "Build your own reports from any combination of dimensions and metrics.",
+    "version": "0.8.0",
+    "theme": false,
+    "require": {
+        "php": ">=7.4.0",
+        "matomo": ">=5.0.0-b1,<6.0.0-b1"
+    },
+    "authors": [
+        {
+            "name": "Digitalist",
+            "email": "cloud@digitalist.com",
+            "homepage": "https://digitalist.cloud"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/Digitalist-Open-Cloud/RebelMyReports/issues",
+        "source": "https://github.com/Digitalist-Open-Cloud/RebelMyReports"
+    },
+    "homepage": "https://digitalist.cloud/matomo",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "custom reports",
+        "reports"
+    ]
+}

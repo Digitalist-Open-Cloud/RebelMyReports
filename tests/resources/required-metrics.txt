@@ -1,0 +1,234 @@
+Average Value
+Avg. Actions In Visit Per Visit
+Avg. Completion
+Avg. Days Since First Visit Per Visit
+Avg. Days Since Last Ecommerce Order Per Visit
+Avg. Days Since Last Visit Per Visit
+Avg. Discount Per Order ID
+Avg. DOM Completion Time
+Avg. DOM Processing Time
+Avg. Events Per Visit
+Avg. Media Length
+Avg. Network Time
+Avg. Number Of Interactions Per Visit
+Avg. Number Of Internal Searches Per Visit
+Avg. Number Of Items In Cart Per Order ID
+Avg. On Load Time
+Avg. Order Value Per Order ID
+Avg. Profilable Per Visit
+Avg. Seconds Since First Visit Per Visit
+Avg. Seconds Since Last Ecommerce Order Per Visit
+Avg. Seconds Since Last Visit Per Visit
+Avg. Server Time
+Avg. Shipping Per Order ID
+Avg. Subtotal Per Order ID
+Avg. Tax Per Order ID
+Avg. Time Spent
+Avg. Transfer Time
+Avg. Visit Duration (in Seconds) Per Visit
+Bounce Rate
+Bounces
+Conversion Rate
+Conversions Goal
+Days To Conversion Goal
+Events With A Value
+Fingerprint
+Finish Rate
+Finishes
+Form Avg. Hesitation Time
+Form Avg. Time Spent
+Form Avg. Time To First Submit
+Form Conversion Rate
+Form Conversions
+Form Re-submitter Rate
+Form Re-submitters
+Form Starters
+Form Starters Rate
+Form Starts
+Form Submissions
+Form Submitters
+Form Viewers
+Form Views
+Goal Conversion Rate
+Hesitation Time
+Hits
+Impressions
+Impressions By Unique Visitors
+Max Actions In Visit
+Max Days Since First Visit
+Max Days Since Last Ecommerce Order
+Max Days Since Last Visit
+Max Discount
+Max DOM Completion Time
+Max DOM Processing Time
+Max Event Value
+Max Events
+Max Form Views
+Max Hesitation Time
+Max Media Length (in Seconds)
+Max Network Time
+Max Number Of Interactions
+Max Number Of Internal Searches
+Max Number Of Items In Cart
+Max On Load Time
+Max Order Value
+Max Overall Revenue
+Max Pageview Position
+Max Product Price
+Max Product Quantity
+Max Seconds Since First Visit
+Max Seconds Since Last Ecommerce Order
+Max Seconds Since Last Visit
+Max Server Time
+Max Shipping
+Max Subtotal
+Max Tax
+Max Time Spent
+Max Time Spent In Referring Action
+Max Time Spent Playing Media (in Seconds)
+Max Time To First Submit
+Max Time To Initial Media Play (in Seconds)
+Max Transfer Time
+Max Viewed Product Price
+Max Visit Duration (in Seconds)
+Min DOM Completion Time
+Min DOM Processing Time
+Min Event Value
+Min Network Time
+Min On Load Time
+Min Server Time
+Min Transfer Time
+Order ID
+Pageviews
+Pageviews With DOM Completion Time
+Pageviews With DOM Processing Time
+Pageviews With Network Time
+Pageviews With On Load Time
+Pageviews With Server Time
+Pageviews With Transfer Time
+Play Rate
+Plays
+Revenue Goal
+Time Spent
+Time To First Submit
+Total Actions In Visit
+Total Days Since First Visit
+Total Days Since Last Ecommerce Order
+Total Days Since Last Visit
+Total Discount
+Total DOM Completion Time
+Total DOM Processing Time
+Total Event Value
+Total Events
+Total Media Length (in Seconds)
+Total Network Time
+Total Number Of Interactions
+Total Number Of Internal Searches
+Total Number Of Items In Cart
+Total On Load Time
+Total Order Value
+Total Pageview Position
+Total Product Price
+Total Product Quantity
+Total Profilable
+Total Seconds Since First Visit
+Total Seconds Since Last Ecommerce Order
+Total Seconds Since Last Visit
+Total Server Time
+Total Shipping
+Total Subtotal
+Total Tax
+Total Time Spent In Referring Action
+Total Time Spent Playing Media (in Seconds)
+Total Time To Initial Media Play (in Seconds)
+Total Transfer Time
+Total Viewed Product Price
+Total Visit Duration (in Seconds)
+Unique Action URL
+Unique Ad Click ID
+Unique Ad Provider
+Unique Browser Engines
+Unique Browser Versions
+Unique Browsers
+Unique Campaign Content
+Unique Campaign Group
+Unique Campaign Id
+Unique Campaign Keyword
+Unique Campaign Medium
+Unique Campaign Name
+Unique Campaign Placement
+Unique Campaign Source
+Unique Categories (Site Search)
+Unique Channel Types
+Unique Cities
+Unique Clicked Outlinks
+Unique Client Types
+Unique Colour
+Unique Content Interactions
+Unique Content Names
+Unique Content Pieces
+Unique Content Targets
+Unique Continents
+Unique Countries
+Unique Date
+Unique Device Brands
+Unique Device Models
+Unique Device Types
+Unique Download URLs
+Unique Entry Page Titles
+Unique Entry Page URLs
+Unique Event Actions
+Unique Event Categories
+Unique Event Names
+Unique Event URLs
+Unique Exit Page Titles
+Unique Exit Page URLs
+Unique Extract
+Unique Grouped Resources
+Unique Keyword Counts (Site Search)
+Unique Keywords
+Unique Keywords (Site Search)
+Unique Languages
+Unique Latitudes
+Unique Location
+Unique Longitudes
+Unique Measurables
+Unique Media Titles
+Unique Operating System Versions
+Unique Operating Systems
+Unique Page Titles
+Unique Page URLs
+Unique Player Names
+Unique Product Names
+Unique Product SKUs
+Unique Referrer
+Unique Referrer Names
+Unique Referrer URLs
+Unique Regions
+Unique Resolutions
+Unique Resources
+Unique User IDs
+Unique Utm_custom
+Unique Video Resolutions
+Unique Viewed Product Category 1
+Unique Viewed Product Category 2
+Unique Viewed Product Category 3
+Unique Viewed Product Category 4
+Unique Viewed Product Category 5
+Unique Viewed Product Name
+Unique Viewed Product SKU
+Unique Visit Ecommerce Status At The End Of The Visit
+Unique Visit Types
+Unique Visitor IPs
+Unique Visitors
+Visits
+Visits To Conversion Goal
+Visits With Conversions
+Visits With Plugin (Cookie)
+Visits With Plugin (Flash)
+Visits With Plugin (Java)
+Visits With Plugin (PDF)
+Visits With Plugin (QuickTime)
+Visits With Plugin (RealPlayer)
+Visits With Plugin (Silverlight)
+Visits With Plugin (Windows Media)
