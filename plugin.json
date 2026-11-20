@@ -1,7 +1,7 @@
 {
     "name": "RebelMyReports",
     "description": "Build your own reports from any combination of dimensions and metrics.",
-    "version": "0.8.5",
+    "version": "0.8.6",
     "theme": false,
     "require": {
         "php": ">=7.4.0",

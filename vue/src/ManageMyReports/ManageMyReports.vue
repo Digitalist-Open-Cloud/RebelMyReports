@@ -17,7 +17,7 @@
       @changed="fetchMetrics()"
     />
     <MyReportEditor
-      v-else
+      v-if="isEditing"
       :report="editedReport"
       :dimensions="dimensions"
       :metrics="metrics"

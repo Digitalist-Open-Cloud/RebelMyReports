@@ -345,16 +345,16 @@ function today() {
 InvalidateMyReportsvue_type_script_lang_ts.render = render
 
 /* harmony default export */ var InvalidateMyReports = (InvalidateMyReportsvue_type_script_lang_ts);
-// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/RebelMyReports/vue/src/ManageMyReports/ManageMyReports.vue?vue&type=template&id=5dda3d62
+// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/RebelMyReports/vue/src/ManageMyReports/ManageMyReports.vue?vue&type=template&id=72bd4005
 
-const ManageMyReportsvue_type_template_id_5dda3d62_hoisted_1 = {
+const ManageMyReportsvue_type_template_id_72bd4005_hoisted_1 = {
   class: "manageMyReports"
 };
-function ManageMyReportsvue_type_template_id_5dda3d62_render(_ctx, _cache, $props, $setup, $data, $options) {
+function ManageMyReportsvue_type_template_id_72bd4005_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_MyReportsList = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("MyReportsList");
   const _component_MyMetricsManager = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("MyMetricsManager");
   const _component_MyReportEditor = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("MyReportEditor");
-  return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", ManageMyReportsvue_type_template_id_5dda3d62_hoisted_1, [!_ctx.isEditing ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(_component_MyReportsList, {
+  return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", ManageMyReportsvue_type_template_id_72bd4005_hoisted_1, [!_ctx.isEditing ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(_component_MyReportsList, {
     key: 0,
     reports: _ctx.reports,
     dimensions: _ctx.dimensions,
@@ -368,7 +368,7 @@ function ManageMyReportsvue_type_template_id_5dda3d62_render(_ctx, _cache, $prop
     key: 1,
     metrics: _ctx.metrics,
     onChanged: _cache[3] || (_cache[3] = $event => _ctx.fetchMetrics())
-  }, null, 8, ["metrics"])) : (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(_component_MyReportEditor, {
+  }, null, 8, ["metrics"])) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true), _ctx.isEditing ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])(_component_MyReportEditor, {
     key: 2,
     report: _ctx.editedReport,
     dimensions: _ctx.dimensions,
@@ -378,9 +378,9 @@ function ManageMyReportsvue_type_template_id_5dda3d62_render(_ctx, _cache, $prop
     "max-dimensions": _ctx.maxDimensions,
     onSaved: _cache[4] || (_cache[4] = $event => _ctx.onChanged()),
     onCancel: _cache[5] || (_cache[5] = $event => _ctx.isEditing = false)
-  }, null, 8, ["report", "dimensions", "metrics", "categories", "rearchive-months", "max-dimensions"]))]);
+  }, null, 8, ["report", "dimensions", "metrics", "categories", "rearchive-months", "max-dimensions"])) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true)]);
 }
-// CONCATENATED MODULE: ./plugins/RebelMyReports/vue/src/ManageMyReports/ManageMyReports.vue?vue&type=template&id=5dda3d62
+// CONCATENATED MODULE: ./plugins/RebelMyReports/vue/src/ManageMyReports/ManageMyReports.vue?vue&type=template&id=72bd4005
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/RebelMyReports/vue/src/MyReportsList/MyReportsList.vue?vue&type=template&id=adcd5616
 
@@ -2358,7 +2358,7 @@ MyMetricsManagervue_type_script_lang_ts.render = MyMetricsManagervue_type_templa
 
 
 
-ManageMyReportsvue_type_script_lang_ts.render = ManageMyReportsvue_type_template_id_5dda3d62_render
+ManageMyReportsvue_type_script_lang_ts.render = ManageMyReportsvue_type_template_id_72bd4005_render
 
 /* harmony default export */ var ManageMyReports = (ManageMyReportsvue_type_script_lang_ts);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/RebelMyReports/vue/src/MyReportExamples/MyReportExamples.vue?vue&type=template&id=4d349481
