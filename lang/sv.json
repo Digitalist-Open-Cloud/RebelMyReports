@@ -103,7 +103,7 @@
         "ExampleReturningName": "Återkommande besökare över tid",
         "ExampleVisitsDescription": "Ett nyckeltal: ett tal med förändringen sedan föregående period, även användbart som widget på instrumentpanelen.",
         "ExampleVisitsName": "Besök",
-        "ExamplesIntro": "Skapa ett exempel för att se hur en funktion fungerar. Det blir en vanlig rapport för webbplatsen \"%s\" som du kan ändra eller ta bort.",
+        "ExamplesIntro": "Skapa ett exempel för att se hur en funktion fungerar. Det blir en vanlig rapport för webbplatsen du väljer här, som du kan ändra eller ta bort.",
         "ExamplesTitle": "Exempelrapporter",
         "FilterOperator": "är",
         "FirstMetric": "Den första variabeln",

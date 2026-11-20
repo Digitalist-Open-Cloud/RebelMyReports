@@ -165,7 +165,9 @@ describe('RebelMyReports', function () {
         expect(limits).to.have.lengthOf(5);
     });
 
-    it('should create an example report from the documentation', async function () {
+    it('should create an example report when the page is opened without a website', async function () {
+        await page.goto('?module=RebelMyReports&action=documentation');
+        await page.waitForSelector('.myReportExamples__example .btn:not([disabled])');
         await (await page.jQuery('.myReportExamples__example:contains(Returning visitors over time) .btn')).click();
         await page.waitForSelector('.notification-success');
         await openManagePage();

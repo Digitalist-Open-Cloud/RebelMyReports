@@ -103,7 +103,7 @@
         "ExampleReturningName": "Returning visitors over time",
         "ExampleVisitsDescription": "A key figure: one number with the change since the previous period, also useful as a dashboard widget.",
         "ExampleVisitsName": "Visits",
-        "ExamplesIntro": "Create an example to see how a function works. It becomes a normal report of the website \"%s\" that you can change or delete.",
+        "ExamplesIntro": "Create an example to see how a function works. It becomes a normal report of the website you choose here, which you can change or delete.",
         "ExamplesTitle": "Example reports",
         "FilterOperator": "is",
         "FirstMetric": "The first metric",

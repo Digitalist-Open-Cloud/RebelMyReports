@@ -2361,43 +2361,55 @@ MyMetricsManagervue_type_script_lang_ts.render = MyMetricsManagervue_type_templa
 ManageMyReportsvue_type_script_lang_ts.render = ManageMyReportsvue_type_template_id_5dda3d62_render
 
 /* harmony default export */ var ManageMyReports = (ManageMyReportsvue_type_script_lang_ts);
-// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/RebelMyReports/vue/src/MyReportExamples/MyReportExamples.vue?vue&type=template&id=0886e2fe
+// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/RebelMyReports/vue/src/MyReportExamples/MyReportExamples.vue?vue&type=template&id=4d349481
 
-const MyReportExamplesvue_type_template_id_0886e2fe_hoisted_1 = {
+const MyReportExamplesvue_type_template_id_4d349481_hoisted_1 = {
   class: "myReportExamples"
 };
-const MyReportExamplesvue_type_template_id_0886e2fe_hoisted_2 = {
+const MyReportExamplesvue_type_template_id_4d349481_hoisted_2 = {
+  class: "myReportExamples__site"
+};
+const MyReportExamplesvue_type_template_id_4d349481_hoisted_3 = {
   class: "myReportExamples__text"
 };
-const MyReportExamplesvue_type_template_id_0886e2fe_hoisted_3 = {
+const MyReportExamplesvue_type_template_id_4d349481_hoisted_4 = {
   class: "myReportExamples__name"
 };
-const MyReportExamplesvue_type_template_id_0886e2fe_hoisted_4 = {
+const MyReportExamplesvue_type_template_id_4d349481_hoisted_5 = {
   class: "myReportExamples__parts"
 };
-const MyReportExamplesvue_type_template_id_0886e2fe_hoisted_5 = ["disabled", "onClick"];
-function MyReportExamplesvue_type_template_id_0886e2fe_render(_ctx, _cache, $props, $setup, $data, $options) {
+const MyReportExamplesvue_type_template_id_4d349481_hoisted_6 = ["disabled", "onClick"];
+function MyReportExamplesvue_type_template_id_4d349481_render(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_SiteSelector = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("SiteSelector");
   const _component_ContentBlock = Object(external_commonjs_vue_commonjs2_vue_root_Vue_["resolveComponent"])("ContentBlock");
-  return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", MyReportExamplesvue_type_template_id_0886e2fe_hoisted_1, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(_component_ContentBlock, {
+  return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", MyReportExamplesvue_type_template_id_4d349481_hoisted_1, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(_component_ContentBlock, {
     "content-title": _ctx.translate('RebelMyReports_ExamplesTitle')
   }, {
-    default: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withCtx"])(() => [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("p", null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(_ctx.translate('RebelMyReports_ExamplesIntro', _ctx.siteName)), 1), (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderList"])(_ctx.examples, example => {
+    default: Object(external_commonjs_vue_commonjs2_vue_root_Vue_["withCtx"])(() => [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("p", null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(_ctx.translate('RebelMyReports_ExamplesIntro')), 1), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", MyReportExamplesvue_type_template_id_4d349481_hoisted_2, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createVNode"])(_component_SiteSelector, {
+      modelValue: _ctx.site,
+      "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => _ctx.site = $event),
+      "show-selected-site": true,
+      "default-to-first-site": true,
+      "show-all-sites-item": false,
+      "switch-site-on-select": false,
+      "only-sites-with-at-least-write-access": true
+    }, null, 8, ["modelValue"])]), (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["renderList"])(_ctx.examples, example => {
       return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])("div", {
         class: "myReportExamples__example",
         key: example.id
-      }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", MyReportExamplesvue_type_template_id_0886e2fe_hoisted_2, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("h3", MyReportExamplesvue_type_template_id_0886e2fe_hoisted_3, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(example.name), 1), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("p", null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(example.description), 1), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("p", MyReportExamplesvue_type_template_id_0886e2fe_hoisted_4, [example.dimensions.length ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], {
+      }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("div", MyReportExamplesvue_type_template_id_4d349481_hoisted_3, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("h3", MyReportExamplesvue_type_template_id_4d349481_hoisted_4, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(example.name), 1), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("p", null, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(example.description), 1), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("p", MyReportExamplesvue_type_template_id_4d349481_hoisted_5, [example.dimensions.length ? (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementBlock"])(external_commonjs_vue_commonjs2_vue_root_Vue_["Fragment"], {
         key: 0
       }, [Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createTextVNode"])(Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(_ctx.translate('RebelMyReports_Dimensions')) + ": " + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(example.dimensions.join(', ')) + ". ", 1)], 64)) : Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createCommentVNode"])("", true), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createTextVNode"])(" " + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(_ctx.translate('General_Metrics')) + ": " + Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(example.metrics.join(', ')) + ". ", 1)])]), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("button", {
         type: "button",
         class: "btn",
-        disabled: _ctx.busy === example.id || _ctx.created.includes(example.id),
+        disabled: !_ctx.site || _ctx.busy === example.id || _ctx.isCreated(example),
         onClick: $event => _ctx.create(example)
-      }, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(_ctx.translate(_ctx.created.includes(example.id) ? 'RebelMyReports_ExampleCreated' : 'RebelMyReports_ExampleCreate')), 9, MyReportExamplesvue_type_template_id_0886e2fe_hoisted_5)]);
+      }, Object(external_commonjs_vue_commonjs2_vue_root_Vue_["toDisplayString"])(_ctx.translate(_ctx.isCreated(example) ? 'RebelMyReports_ExampleCreated' : 'RebelMyReports_ExampleCreate')), 9, MyReportExamplesvue_type_template_id_4d349481_hoisted_6)]);
     }), 128))]),
     _: 1
   }, 8, ["content-title"])]);
 }
-// CONCATENATED MODULE: ./plugins/RebelMyReports/vue/src/MyReportExamples/MyReportExamples.vue?vue&type=template&id=0886e2fe
+// CONCATENATED MODULE: ./plugins/RebelMyReports/vue/src/MyReportExamples/MyReportExamples.vue?vue&type=template&id=4d349481
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-typescript/node_modules/cache-loader/dist/cjs.js??ref--15-0!./node_modules/babel-loader/lib!./node_modules/@vue/cli-plugin-typescript/node_modules/ts-loader??ref--15-2!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/RebelMyReports/vue/src/MyReportExamples/MyReportExamples.vue?vue&type=script&lang=ts
 
@@ -2410,28 +2422,36 @@ function MyReportExamplesvue_type_template_id_0886e2fe_render(_ctx, _cache, $pro
     }
   },
   components: {
-    ContentBlock: external_CoreHome_["ContentBlock"]
+    ContentBlock: external_CoreHome_["ContentBlock"],
+    SiteSelector: external_CoreHome_["SiteSelector"]
   },
   data() {
     return {
       busy: '',
-      created: []
+      created: [],
+      // Without a site the selector chooses one.
+      site: external_CoreHome_["Matomo"].idSite ? {
+        id: external_CoreHome_["Matomo"].idSite,
+        name: external_CoreHome_["Matomo"].helper.htmlDecode(external_CoreHome_["Matomo"].siteName)
+      } : undefined
     };
   },
-  computed: {
-    siteName() {
-      return external_CoreHome_["Matomo"].helper.htmlDecode(external_CoreHome_["Matomo"].siteName);
-    }
-  },
   methods: {
+    isCreated(example) {
+      var _this$site;
+      return this.created.includes(`${(_this$site = this.site) === null || _this$site === void 0 ? void 0 : _this$site.id}:${example.id}`);
+    },
     create(example) {
+      var _this$site2;
+      const idSite = (_this$site2 = this.site) === null || _this$site2 === void 0 ? void 0 : _this$site2.id;
       this.busy = example.id;
       external_CoreHome_["AjaxHelper"].post({
-        method: 'RebelMyReports.addExampleReport'
+        method: 'RebelMyReports.addExampleReport',
+        idSite
       }, {
         example: example.id
       }).then(() => {
-        this.created.push(example.id);
+        this.created.push(`${idSite}:${example.id}`);
         external_CoreHome_["NotificationsStore"].show({
           id: 'rebelMyReportsExampleCreated',
           message: Object(external_CoreHome_["translate"])('RebelMyReports_ReportSaved'),
@@ -2450,7 +2470,7 @@ function MyReportExamplesvue_type_template_id_0886e2fe_render(_ctx, _cache, $pro
 
 
 
-MyReportExamplesvue_type_script_lang_ts.render = MyReportExamplesvue_type_template_id_0886e2fe_render
+MyReportExamplesvue_type_script_lang_ts.render = MyReportExamplesvue_type_template_id_4d349481_render
 
 /* harmony default export */ var MyReportExamples = (MyReportExamplesvue_type_script_lang_ts);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--1-1!./plugins/RebelMyReports/vue/src/MyReportExport/MyReportExport.vue?vue&type=template&id=47682f32
