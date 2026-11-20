@@ -9,6 +9,7 @@ use Piwik\Piwik;
 use Piwik\Plugin\ProcessedMetric;
 use Piwik\Plugin\Report;
 use Piwik\Plugin\ViewDataTable;
+use Piwik\Plugins\RebelMyReports\Archiving\ArchiveStatus;
 use Piwik\Plugins\CoreVisualizations\Visualizations\HtmlTable;
 use Piwik\Plugins\CoreVisualizations\Visualizations\JqplotGraph\Evolution;
 use Piwik\Plugins\RebelMyReports\Visualizations\KeyFigure;
@@ -146,6 +147,8 @@ class GetReportData extends Report
         $view->requestConfig->request_parameters_to_modify['idMyReport'] = $idMyReport;
         $view->requestConfig->request_parameters_to_modify['reportUniqueId'] = sprintf('RebelMyReports_getReportData_idMyReport--%d', $idMyReport);
 
+        $idSite = Request::fromRequest()->getIntegerParameter('idSite', 0);
+        $view->config->show_footer_message = (new ArchiveStatus())->getBuildingMessage($this->report, $idSite);
         $view->config->show_goals = false;
         $view->config->show_table_all_columns = false;
         $view->config->columns_to_display = array_merge(empty($this->dimensions) ? [] : ['label'], $this->columns);

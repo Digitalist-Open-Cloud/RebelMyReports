@@ -12,6 +12,7 @@ use Piwik\Metrics\Formatter;
 use Piwik\Piwik;
 use Piwik\Plugin\ViewDataTable;
 use Piwik\Plugins\CoreVisualizations\Visualizations\JqplotGraph\Evolution;
+use Piwik\Plugins\RebelMyReports\Archiving\ArchiveStatus;
 use Piwik\Plugins\RebelMyReports\Catalogue;
 use Piwik\Plugins\RebelMyReports\ReportManager;
 use Piwik\Request;
@@ -95,6 +96,10 @@ class KeyFigure extends ViewDataTable
             $attributes .= sprintf(' %s="%s"', $name, htmlspecialchars(json_encode($value), ENT_QUOTES));
         }
         $html = '<div vue-entry="RebelMyReports.MyReportKeyFigure"' . $attributes . '></div>';
+        $building = (new ArchiveStatus())->getBuildingMessage($report, $idSite);
+        if ($building !== '') {
+            $html .= '<div class="datatableFooterMessage">' . $building . '</div>';
+        }
 
         if ($request->getIntegerParameter('widget', 0)) {
             return $html;

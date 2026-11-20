@@ -539,9 +539,11 @@ class ApiTest extends IntegrationTestCase
         $status = $this->api->getArchiveStatus($this->idSite);
 
         $this->assertSame(
-            [['idreport' => $idMyReport, 'first_date' => null, 'last_date' => null, 'is_queued' => true, 'problem' => null]],
+            [['idreport' => $idMyReport, 'first_date' => null, 'last_date' => null, 'is_queued' => true, 'queued_days' => $status[0]['queued_days'], 'problem' => null]],
             $status
         );
+        // Matomo re-archives a new report several months back.
+        $this->assertGreaterThan(28, $status[0]['queued_days']);
     }
 
     public function testInvalidatingMarksTheDaysOfThePeriodForTheChosenReports()

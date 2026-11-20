@@ -2,11 +2,15 @@
 
 namespace Piwik\Plugins\RebelMyReports\tests\Integration\Commands;
 
+use Piwik\Access;
+use Piwik\Archive;
+use Piwik\Cache;
 use Piwik\Common;
 use Piwik\Db;
 use Piwik\Plugins\Goals\API as GoalsApi;
 use Piwik\Plugins\RebelMyReports\Model;
 use Piwik\Plugins\RebelMyReports\tests\Fixtures\TrackedVisits;
+use Piwik\Plugins\VisitsSummary\API as VisitsSummaryApi;
 use Piwik\Tests\Framework\Fixture;
 use Piwik\Tests\Framework\TestCase\ConsoleCommandTestCase;
 
@@ -143,5 +147,40 @@ class ArchiveTest extends ConsoleCommandTestCase
             ['name' => "RebelMyReports_{$this->idReport}_1", 'date1' => TrackedVisits::DAY, 'period' => 1],
             $archived
         );
+    }
+
+    public function testAWeekThatIsArchivedAgainKeepsTheDaysArchivedForTheReportAlone()
+    {
+        $tracker = Fixture::getTracker(1, TrackedVisits::DAY . ' 08:00:00', true, true);
+        $tracker->setUrl('http://example.org/early');
+        Fixture::checkResponse($tracker->doTrackPageView('Early'));
+        $getVisits = fn () => VisitsSummaryApi::getInstance()->get(1, 'week', TrackedVisits::DAY);
+        // The days are archived before the report exists, so only its own archives have its data.
+        Access::doAsSuperUser($getVisits);
+        $idReport = (new Model())->addReport([
+            'idsite' => 1,
+            'name' => 'Later resolutions',
+            'report_type' => Model::TYPE_TABLE,
+            'dimensions' => ['Resolution.Resolution'],
+            'metrics' => ['nb_visits'],
+        ]);
+        $result = $this->applicationTester->run([
+            'command' => 'rebelmyreports:archive',
+            '--idmyreport' => (string) $idReport,
+            '--rearchive' => true,
+            '--date' => TrackedVisits::DAY,
+        ]);
+        $this->assertSame(0, $result, $this->getCommandDisplayOutputErrorMessage());
+
+        // The week is archived again as a whole, like core does while a week is going on.
+        Db::query('DELETE FROM ' . Common::prefixTable('archive_numeric_2024_03') . ' WHERE period = 2');
+        Archive::clearStaticCache();
+        Cache::getTransientCache()->flushAll();
+        Access::doAsSuperUser($getVisits);
+
+        $table = Access::doAsSuperUser(
+            fn () => Archive::createDataTableFromArchive("RebelMyReports_{$idReport}_1", 1, 'week', TrackedVisits::DAY, '')
+        );
+        $this->assertGreaterThan(0, $table->getRowsCount());
     }
 }

@@ -254,6 +254,7 @@ class RebelMyReports extends Plugin
         $translationKeys[] = 'RebelMyReports_ViewReport';
         $translationKeys[] = 'RebelMyReports_Visualization';
         $translationKeys[] = 'RebelMyReports_VisualizationHelp';
+        $translationKeys[] = 'RebelMyReports_DaysWaiting';
         $translationKeys[] = 'RebelMyReports_WaitingToBeArchived';
         $translationKeys[] = 'RebelMyReports_WhereToShow';
     }

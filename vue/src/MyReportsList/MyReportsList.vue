@@ -111,7 +111,9 @@
                 <span
                   class="myReportsList__description"
                   v-if="statusById[report.idreport].is_queued"
-                >{{ translate('RebelMyReports_WaitingToBeArchived') }}</span>
+                >{{ statusById[report.idreport].queued_days
+                  ? translate('RebelMyReports_DaysWaiting', statusById[report.idreport].queued_days)
+                  : translate('RebelMyReports_WaitingToBeArchived') }}</span>
                 <span
                   class="myReportsList__problem"
                   v-if="statusById[report.idreport].problem"

@@ -96,7 +96,8 @@ class API extends \Piwik\Plugin\API
      *
      * @return array[] one entry per report: idreport, first_date and last_date (the first and
      *                 the last day with archived data, null when there is none), is_queued
-     *                 (whether more is waiting to be archived) and problem (null, or type and
+     *                 (whether more is waiting to be archived), queued_days (how many days
+     *                 are waiting) and problem (null, or type and
      *                 period of the last period that could not be archived: "timeout" when a
      *                 query ran too long, "truncated" when it had more rows than a report
      *                 reads, or "failed")

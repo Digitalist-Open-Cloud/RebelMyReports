@@ -84,7 +84,14 @@ class ReportRecord extends RecordBuilder
             }
         }
 
-        parent::buildForNonDayPeriod($archiveProcessor);
+        // Core reads the days of a period through one object, which only looks up the archives
+        // of single reports for the first plugin it is asked about. A processor of our own
+        // looks up ours, so days that were archived for the report alone are not left out.
+        parent::buildForNonDayPeriod(new ArchiveProcessor(
+            $archiveProcessor->getParams(),
+            $archiveProcessor->getArchiveWriter(),
+            $archiveProcessor->getLogAggregator()
+        ));
     }
 
     public function getQueryOriginHint(): string

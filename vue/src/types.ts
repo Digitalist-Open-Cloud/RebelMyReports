@@ -37,6 +37,7 @@ export interface ArchiveStatus {
   first_date: string|null;
   last_date: string|null;
   is_queued: boolean;
+  queued_days: number;
   problem: { type: 'timeout'|'failed'|'truncated', period: string }|null;
 }
 

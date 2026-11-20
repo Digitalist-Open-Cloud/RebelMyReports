@@ -56,6 +56,13 @@ class ReportRenderingTest extends IntegrationTestCase
         $this->assertStringContainsString('800x600', $html);
     }
 
+    public function testAReportThatIsStillBeingBuiltSaysSo()
+    {
+        $html = $this->render(API::getInstance()->addReport(1, 'Resolutions', 'table', ['nb_visits'], ['Resolution.Resolution']));
+
+        $this->assertStringContainsString('still being built', $html);
+    }
+
     public function testTableReportCanBeShownAsInsights()
     {
         $_GET['date'] = TrackedVisits::NEXT_DAY;
