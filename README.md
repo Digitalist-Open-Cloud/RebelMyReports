@@ -50,12 +50,15 @@ Reports are archived by Matomo's normal archiving. To archive single reports rig
 ./console rebelmyreports:list
 ./console rebelmyreports:archive
 ./console rebelmyreports:archive --idmyreport=3
+./console rebelmyreports:archive --idsite=1
 ./console rebelmyreports:archive --idmyreport=3,4 --rearchive --date=2024-01-01,2024-03-31
 ```
 
-Without `--idmyreport` all reports are archived. Without `--rearchive` it archives what is
+Without `--idmyreport` all reports are archived, or with `--idsite` all reports of those websites. Without `--rearchive` it archives what is
 waiting for the report, for example after it was created or changed. With `--rearchive` the data is built again, for `--date` or, without a
-date, as far back as Matomo re-archives reports by default. See `--help` for all options.
+date, as far back as Matomo re-archives reports by default. With `--date` only those dates are archived,
+together with the week, month and year they belong to; what else is waiting is left for the
+next archiving. See `--help` for all options.
 
 To have reports built again without the command line, a super user can use Administration >
 System > Invalidate My Reports: choose all or some reports, a day, week, month, year or date

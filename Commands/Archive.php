@@ -30,7 +30,7 @@ class Archive extends ConsoleCommand
             . '  ./console rebelmyreports:archive --rearchive --date=2024-03-05 --period=day'
         );
         $this->addRequiredValueOption('idmyreport', null, 'Report IDs separated by commas. Defaults to all reports. See rebelmyreports:list.', 'all');
-        $this->addRequiredValueOption('idsite', null, 'Website IDs separated by commas. Defaults to the websites of each report.');
+        $this->addRequiredValueOption('idsite', null, 'Website IDs separated by commas: only reports of these websites. Defaults to the websites of each report.');
         $this->addNoValueOption('rearchive', null, 'Build the data again, also where it is already archived.');
         $this->addRequiredValueOption('date', null, 'With --rearchive: a date or date range, eg, 2024-03-05 or 2024-01-01,2024-03-31.');
         $this->addRequiredValueOption('period', null, 'With --rearchive: period types separated by commas (day, week, month, year). Defaults to all.', 'all');
@@ -66,6 +66,11 @@ class Archive extends ConsoleCommand
             $arguments = ['--force-report' => $record, '--disable-scheduled-tasks' => true];
             if ($idSites) {
                 $arguments['--force-idsites'] = implode(',', $idSites);
+            }
+            $date = (string) $input->getOption('date');
+            if ($date !== '') {
+                // Without it, core also archives everything else that is waiting for the report.
+                $arguments['--force-date-range'] = strpos($date, ',') === false ? "$date,$date" : $date;
             }
 
             if ($this->runCommand('core:archive', $arguments) !== self::SUCCESS) {
@@ -116,7 +121,12 @@ class Archive extends ConsoleCommand
         $model = new Model();
 
         if ($option === 'all' || $option === '') {
-            return $model->getAllReports();
+            $idSites = $this->getRequestedIdSites();
+
+            return array_filter(
+                $model->getAllReports(),
+                fn (array $report) => !$idSites || $report['idsite'] === 0 || in_array($report['idsite'], $idSites, true)
+            );
         }
 
         $ids = array_filter(array_map('trim', explode(',', $option)), fn (string $value) => $value !== '');
@@ -134,12 +144,21 @@ class Archive extends ConsoleCommand
     }
 
     /**
+     * @return int[] the websites of --idsite
+     */
+    private function getRequestedIdSites(): array
+    {
+        $option = (string) $this->getInput()->getOption('idsite');
+
+        return array_map('intval', array_filter(array_map('trim', explode(',', $option)), fn (string $value) => $value !== ''));
+    }
+
+    /**
      * @return int[] empty for all websites
      */
     private function getIdSites(array $report): array
     {
-        $option = (string) $this->getInput()->getOption('idsite');
-        $idSites = array_map('intval', array_filter(array_map('trim', explode(',', $option)), fn (string $value) => $value !== ''));
+        $idSites = $this->getRequestedIdSites();
 
         if ($report['idsite'] === 0) {
             return $idSites;

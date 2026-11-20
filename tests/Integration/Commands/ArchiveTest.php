@@ -103,6 +103,23 @@ class ArchiveTest extends ConsoleCommandTestCase
         $this->assertStringContainsString("RebelMyReports_{$second}_1", $this->applicationTester->getDisplay());
     }
 
+    public function testWithOnlyAWebsiteItsReportsAreArchived()
+    {
+        $second = (new Model())->addReport([
+            'idsite' => 2,
+            'name' => 'Visits',
+            'report_type' => Model::TYPE_EVOLUTION,
+            'dimensions' => [],
+            'metrics' => ['nb_visits'],
+        ]);
+
+        $result = $this->applicationTester->run(['command' => 'rebelmyreports:archive', '--idsite' => '2']);
+
+        $this->assertSame(0, $result, $this->getCommandDisplayOutputErrorMessage());
+        $this->assertStringContainsString("RebelMyReports_{$second}_1", $this->applicationTester->getDisplay());
+        $this->assertStringNotContainsString("RebelMyReports_{$this->idReport}_1", $this->applicationTester->getDisplay());
+    }
+
     public function testRearchiveBuildsTheRecordOfTheReportForTheDates()
     {
         TrackedVisits::track(1);
