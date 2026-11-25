@@ -148,6 +148,14 @@ class ReportRenderingTest extends IntegrationTestCase
         $this->assertEquals(1, $comparisons[0]['evolution']['trend']);
     }
 
+    public function testAWidgetOfAReportThatWasDeletedSaysSoInsteadOfFailing()
+    {
+        $html = $this->render(999);
+
+        $this->assertStringContainsString('There is no report with ID 999 for this website.', $html);
+        $this->assertStringNotContainsString('dataTable', str_replace('pk-emptyDataTable', '', $html));
+    }
+
     /**
      * @return array<string, mixed> the properties passed to the key figure component
      */
