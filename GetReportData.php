@@ -26,6 +26,9 @@ class GetReportData extends Report
 
     private ?array $report = null;
 
+    // The ID of a report that was asked for and is not there for the website.
+    private int $idMissingReport = 0;
+
     /** @var Dimension[] */
     private array $dimensions = [];
 
@@ -64,7 +67,7 @@ class GetReportData extends Report
             try {
                 $this->initFromReport(StaticContainer::get(ReportManager::class)->getReport($idSite, $idMyReport));
             } catch (\Exception $e) {
-                // No such report for the site: the report stays disabled.
+                $this->idMissingReport = $idMyReport;
             }
         }
     }
@@ -124,6 +127,28 @@ class GetReportData extends Report
     public function isEnabled()
     {
         return $this->report !== null && !empty($this->columns);
+    }
+
+    /**
+     * A widget of a report that was deleted is still on the dashboards it was added to. It is
+     * let through here and says in render() that the report is gone.
+     */
+    public function checkIsEnabled()
+    {
+        if ($this->idMissingReport === 0) {
+            parent::checkIsEnabled();
+        }
+    }
+
+    public function render()
+    {
+        if ($this->idMissingReport > 0) {
+            return '<div class="pk-emptyDataTable">'
+                . htmlspecialchars(Piwik::translate('RebelMyReports_ErrorReportNotFound', [$this->idMissingReport]), ENT_QUOTES)
+                . '</div>';
+        }
+
+        return parent::render();
     }
 
     public function getDefaultTypeViewDataTable()
